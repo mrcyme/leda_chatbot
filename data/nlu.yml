@@ -1,0 +1,117 @@
+version: "3.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: thank
+  examples: |
+    - thanks
+    - thank you
+    - thank you very much
+    - thx
+    - cool thanks
+    - thanhs
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - Yes
+    - yep
+    - yes that's it
+    - thats it
+- intent: deny
+  examples: |
+    - no
+    - n
+    - no please
+    - nope
+    - That is not what I want
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: answer_query
+  examples: |
+    - Journalism
+    - Images
+    - Customer data
+    - Natural language processing
+    - image classification
+    - process automation]
+    - I work in finance
+    - pose estimation
+    - healthcare
+    - image
+    - sentiment analysis
+    - natural language processing
+    - I work in a small company designing weelchair for hospital
+    - I would like to monitor the data from patient on wheelchair to delect fall
+    - text
+    - I work in a company building weelchair with sensor
+    - I would like to detect fall
+    - NLP
+    - sentiment analyisi
+    - I work in healthcare
+    - I work in a financial company
+    - I would like to deploy predictive algorithm
+    - manufacturing
+    - Business analyst
+- intent: ask_result
+  examples: |
+    - Can you show me the relevant business cases ?
+    - Can you show me the results ?
+- intent: ask_current_search_state
+  examples: |
+    - What are the current criterions ?
+    - what is the state of the search ?
+    - How many business case are relevant for the moment ?
+- intent: flush_search_state
+  examples: |
+    - can you please reset the search ?
+    - can I start a new research please ?
+    - can you reset the search
+- intent: rectify
+  examples: |
+    - I would like to correct the [sector](feature) in wich I work
+    - Can I please change the [sector](feature) ?
+    - Please change the [sector](feature)
+    - Please change the [data type]{"entity": "feature", "value": "data_type"}
+    - Can you add the [data type]{"entity": "feature", "value": "data_type"} image to my data types
+    - I would like to change my [job description]{"entity": "feature", "value": "company"}
+    - Can you please add manufactiring to the [sector](feature)
+    - can you please change the [sector](feature) in wich I work
+- synonym: data_type
+  examples: |
+    - data type
+- synonym: company
+  examples: |
+    - job description
