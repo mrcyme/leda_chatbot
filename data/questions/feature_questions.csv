@@ -1,6 +1,0 @@
-feature, question, responses, required
-sector, In which sector do you work ?,"healthcare, Manufacturing, Marketing and sales",  True
-role, Which of these role best describes you ?,"[]",  True
-data_type, Which of these data type have you available ?,"[]",  False
-ai_field, Which of these field are you interested in ?,"[]",  False
-ai_technology, Which of these technologies are you interested in ?,"[]", False

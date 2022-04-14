@@ -3,22 +3,26 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
+- answer_query
+- ask_help
 - affirm
 - greet
-- rectify
-- answer_query
-- flush_search_state
-- goodbye
 - deny
-- mood_great
-- mood_unhappy
-- bot_challenge
-- ask_help
+- flush_search_state
+- rectify
+- goodbye
 - ask_result
 - ask_current_search_state
 entities:
+- email
 - feature
 slots:
+  email:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: email
   active_feature:
     type: text
     influence_conversation: false
@@ -29,17 +33,12 @@ slots:
     influence_conversation: true
     mappings:
     - type: custom
-  ai_technology:
+  technologies:
     type: text
     influence_conversation: true
     mappings:
     - type: custom
-  ai_field:
-    type: text
-    influence_conversation: true
-    mappings:
-    - type: custom
-  data_type:
+  data_types:
     type: text
     influence_conversation: true
     mappings:
@@ -62,22 +61,49 @@ slots:
 responses:
   utter_greet:
   - text: Hey! I'm Leda, I am here to help you gain understanding in Artificial Intelligence. I will ask you a few question to get to know you better, is that ok for you ?
+    buttons:
+    - title: Yes
+      payload: yes
+    - title: No
+      payload: no
   utter_happy:
   - text: Great, carry on!
   utter_goodbye:
   - text: Bye
   utter_iamabot:
   - text: I am a bot, powered by Rasa.
+  utter_restart:
+  - text: Do you want to start again ?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_ask_send_email:
+  - text: Do you want to receive the report by email ?
+    buttons:
+    - title: Yes
+      payload: /affirm
+    - title: No
+      payload: /deny
+  utter_ask_email:
+  - text: Can you please enter your email ?
+  utter_help:
+  - text: I am leda, I aim to help you, please proceed
 actions:
-- action_ask_feature_question
-- action_ask_open_question
-- action_fetch_results
+- action_ask_question
+- action_ask_send_results
 - action_flush_search_state
 - action_parse_response
+- action_present_results
 - action_rectify
-- display_help
-- display_result
-- display_search_state
-- explain_result
-- update_search_state
+- action_send_results
+- utter_ask_send_email
+- utter_goodbye
 - utter_greet
+- utter_help
+- utter_restart
+forms:
+  email_form:
+    required_slots:
+    - email

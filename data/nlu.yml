@@ -85,6 +85,89 @@ nlu:
     - I would like to deploy predictive algorithm
     - manufacturing
     - Business analyst
+    - Machine Learning
+    - Computer vision
+    - Pose estimation
+    - Reinforcement learning
+    - Data analysit
+    - To predict medical records
+    - Logistic
+    - Marketeer / Business
+    - machine learning
+    - conversational agent
+    - time series analysis
+    - chatbot
+    - Data Analyst
+    - medical records
+    - Natural Language processing
+    - Finance and Banking
+    - Advertising and Marketing
+    - Environment
+    - Transport and Logistics
+    - Legal
+    - Breeding
+    - Service
+    - Robotics
+    - Manufacturing
+    - Retail
+    - Software
+    - Sport and Wellness
+    - Healthcare
+    - Entertainment
+    - Construction
+    - Security
+    - video
+    - time series
+    - sensor data
+    - sales data
+    - 3D mesh
+    - protein structure
+    - web data
+    - table data
+    - time serie
+    - audio
+    - traffic data
+    - inventory data
+    - customer data
+    - Product Owner
+    - Data scientist
+    - Engineer / Developer
+    - Manager Data Science / CTO
+    - I don't know
+    - I work very hard
+    - I would like to detect smile
+    - Data Scientist
+    - imag
+    - I work very hard at apple
+    - I would like to classify your mother
+    - Transport and Logistic
+    - pose esstimation
+    - I work at Fluxis, its a really cool company
+    - I would like to predict you mother price
+    - Machine Larning
+    - I work in a small comapany
+    - I would like to classify
+    - I work in a company developing an innovative approach to anti-counterfeiting
+    - I work for a heatlhcare company
+    - engineer
+    - Data analyst
+    - I work at fluxis
+    - [yoyo@gmail.com](email)
+    - [iloveai@vub.be](email)
+    - [simeondu38@gmail.com](email)
+    - data scientist
+    - [simeonmcl@gmail.com](email)
+    - [simp@ehb.be](email)
+    - [kolo@feom.be](email)
+    - [oe@jfh.be](email)
+    - [simeon@nhf.com](email)
+    - [sim@fkr.com](email)
+    - [sil@fjn.ce](email)
+    - [jheyo@oem.com](email)
+    - imae
+    - heatlcare
+    - image7
+    - images
 - intent: ask_result
   examples: |
     - Can you show me the relevant business cases ?
@@ -99,19 +182,46 @@ nlu:
     - can you please reset the search ?
     - can I start a new research please ?
     - can you reset the search
+    - please reset search space
+- intent: ask_help
+  examples: |
+    - \help
+    - how can you help me ?
+    - please display help
+    - help
 - intent: rectify
   examples: |
     - I would like to correct the [sector](feature) in wich I work
     - Can I please change the [sector](feature) ?
     - Please change the [sector](feature)
-    - Please change the [data type]{"entity": "feature", "value": "data_type"}
-    - Can you add the [data type]{"entity": "feature", "value": "data_type"} image to my data types
+    - Please change the [data type]{"entity": "feature", "value": "data_types"}
+    - Can you add the [data type]{"entity": "feature", "value": "data_types"} image to my data types
     - I would like to change my [job description]{"entity": "feature", "value": "company"}
     - Can you please add manufactiring to the [sector](feature)
     - can you please change the [sector](feature) in wich I work
-- synonym: data_type
+    - I would like to correct the [sector](feature)
+    - I would like to change the [sector](feature)
+    - I would like to change the [technologies](feature) I am interested in
+    - please change the [data type]{"entity": "feature", "value": "data_types"} to video
+    - Can you please updates my [role](feature)
+    - I would like to change my [role](feature)
+    - I would like to correct the [technologies](feature) I fancy
+    - I would like to change the [data](feature) types I am interested in
+    - I would like to change the [data type](feature) I am interested in
+    - I would like to correct something
+    - I would like to change a feature
+    - I would like to change the [role](feature)
+    - I would like to change something
+    - I would like to change the [data_type](feature)
+    - I would like to change a mistyped feature
+    - I would like the change the [technologies](feature)
+- synonym: data_types
   examples: |
     - data type
+    - data types
 - synonym: company
   examples: |
     - job description
+- regex: email
+  examples: |
+    - (?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])
