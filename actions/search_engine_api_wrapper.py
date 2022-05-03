@@ -6,7 +6,6 @@ if os.environ.get("LEDA_DEV") == "dev":
     SEARCH_ENGINE_API_BASE_URL = "http://127.0.0.1:5000"
 else:
     SEARCH_ENGINE_API_BASE_URL = "http://157.245.70.211:5000"
-print(SEARCH_ENGINE_API_BASE_URL)
 
 
 def get_search_results(features, query=None):

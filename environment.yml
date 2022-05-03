@@ -1,0 +1,4 @@
+name: LedaNLURasa
+channels:
+  - defaults
+prefix: /home/simeon/miniconda3/envs/LedaNLURasa
