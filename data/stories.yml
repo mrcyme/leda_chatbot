@@ -3257,3 +3257,165 @@ stories:
   - action: action_ask_question
   - slot_was_set:
     - active_feature: sector
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: affirm
+  - action: action_ask_question
+  - slot_was_set:
+    - active_feature: sector
+  - intent: answer_query
+  - action: action_parse_response
+  - slot_was_set:
+    - sector: image
+  - slot_was_set:
+    - active_feature: null
+  - action: action_ask_question
+  - slot_was_set:
+    - active_feature: role
+  - intent: answer_query
+  - action: action_parse_response
+  - slot_was_set:
+    - role: image
+  - slot_was_set:
+    - active_feature: null
+  - action: action_ask_question
+  - slot_was_set:
+    - active_feature: data_types
+  - intent: answer_query
+  - action: action_parse_response
+  - slot_was_set:
+    - data_types: image
+  - slot_was_set:
+    - active_feature: null
+  - action: action_ask_question
+  - slot_was_set:
+    - active_feature: technologies
+  - intent: answer_query
+  - action: action_parse_response
+  - slot_was_set:
+    - technologies: image
+  - slot_was_set:
+    - active_feature: null
+  - action: action_ask_question
+  - slot_was_set:
+    - active_feature: company
+  - intent: answer_query
+  - action: action_parse_response
+  - slot_was_set:
+    - company: image
+  - slot_was_set:
+    - active_feature: null
+  - action: action_ask_question
+  - slot_was_set:
+    - active_feature: task
+  - intent: answer_query
+  - action: action_parse_response
+  - slot_was_set:
+    - task: image
+  - slot_was_set:
+    - active_feature: null
+  - action: action_present_results
+  - action: utter_ask_send_email
+  - intent: deny
+  - action: utter_restart
+  - intent: affirm
+  - action: action_flush_search_state
+  - slot_was_set:
+    - sector: null
+  - slot_was_set:
+    - role: null
+  - slot_was_set:
+    - data_types: null
+  - slot_was_set:
+    - technologies: null
+  - slot_was_set:
+    - company: null
+  - slot_was_set:
+    - task: null
+  - action: action_ask_question
+  - slot_was_set:
+    - active_feature: sector
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: affirm
+  - action: action_ask_question
+  - slot_was_set:
+    - active_feature: sector
+  - intent: answer_query
+  - action: action_parse_response
+  - slot_was_set:
+    - sector: image
+  - slot_was_set:
+    - active_feature: null
+  - action: action_ask_question
+  - slot_was_set:
+    - active_feature: role
+  - intent: answer_query
+  - action: action_parse_response
+  - slot_was_set:
+    - role: image
+  - slot_was_set:
+    - active_feature: null
+  - action: action_ask_question
+  - slot_was_set:
+    - active_feature: data_types
+  - intent: answer_query
+  - action: action_parse_response
+  - slot_was_set:
+    - data_types: image
+  - slot_was_set:
+    - active_feature: null
+  - action: action_ask_question
+  - slot_was_set:
+    - active_feature: technologies
+  - intent: answer_query
+  - action: action_parse_response
+  - slot_was_set:
+    - technologies: image
+  - slot_was_set:
+    - active_feature: null
+  - action: action_ask_question
+  - slot_was_set:
+    - active_feature: company
+  - intent: answer_query
+  - action: action_parse_response
+  - slot_was_set:
+    - company: image
+  - slot_was_set:
+    - active_feature: null
+  - action: action_ask_question
+  - slot_was_set:
+    - active_feature: task
+  - intent: answer_query
+  - action: action_parse_response
+  - slot_was_set:
+    - task: image
+  - slot_was_set:
+    - active_feature: null
+  - action: action_present_results
+  - action: utter_ask_send_email
+  - intent: deny
+  - action: utter_restart
+  - intent: affirm
+  - action: action_flush_search_state
+  - slot_was_set:
+    - sector: null
+  - slot_was_set:
+    - role: null
+  - slot_was_set:
+    - data_types: null
+  - slot_was_set:
+    - technologies: null
+  - slot_was_set:
+    - company: null
+  - slot_was_set:
+    - task: null
+  - action: action_ask_question
+  - slot_was_set:
+    - active_feature: sector

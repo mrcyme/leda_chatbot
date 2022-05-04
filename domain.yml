@@ -3,11 +3,11 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-- answer_query
-- ask_help
-- affirm
 - greet
+- answer_query
 - deny
+- affirm
+- ask_help
 - flush_search_state
 - rectify
 - goodbye
@@ -89,7 +89,10 @@ responses:
   utter_ask_email:
   - text: Can you please enter your email ?
   utter_help:
-  - text: I am leda, I aim to help you, please proceed
+  - text: |
+      I am leda, I am here to help you start you AI journey.
+       - Please answer my questions. If you entered a bad answer, you can always ask me to correct it by asking to change the relevant answer (For example, Please change the sector).
+       - Please answer the following question to proceed.
 actions:
 - action_ask_question
 - action_ask_send_results
