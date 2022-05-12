@@ -168,6 +168,12 @@ nlu:
     - heatlcare
     - image7
     - images
+    - We would like to crop pictures of cars and remove the backgound
+    - We would like to ease the maintenance process
+    - ther is a lot of pictures of our pieces and we would like to add them the catalog, however the backrgounds are uggly
+    - We have a lot of pictures of our pieces and we would like to add them the catalog, however the backrgounds are uggly
+    - I would like to detect the movement of a person using his camera feed to correct the pose if not good
+    - I would like to classify some data
 - intent: ask_result
   examples: |
     - Can you show me the relevant business cases ?
@@ -201,19 +207,19 @@ nlu:
     - can you please change the [sector](feature) in wich I work
     - I would like to correct the [sector](feature)
     - I would like to change the [sector](feature)
-    - I would like to change the [technologies](feature) I am interested in
+    - Can you please to change the [technologies](feature) I am interested in
     - please change the [data type]{"entity": "feature", "value": "data_types"} to video
     - Can you please updates my [role](feature)
-    - I would like to change my [role](feature)
-    - I would like to correct the [technologies](feature) I fancy
+    - please update my [role](feature)
+    - Can you please correct the [technologies](feature) I fancy
     - I would like to change the [data](feature) types I am interested in
-    - I would like to change the [data type](feature) I am interested in
+    - Can I please change the [data type](feature) I am interested in
     - I would like to correct something
     - I would like to change a feature
     - I would like to change the [role](feature)
-    - I would like to change something
+    - Can you please change something
     - I would like to change the [data_type](feature)
-    - I would like to change a mistyped feature
+    - Can I please change a mistyped feature
     - I would like the change the [technologies](feature)
 - synonym: data_types
   examples: |

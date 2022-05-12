@@ -55,11 +55,11 @@ class ActionParseResponse(Action):
         response = tracker.latest_message["text"]
         feature = tracker.slots["active_feature"]
         tracker.slots[feature] = response
-        if all([tracker.slots[q["feature"]] for q in QUESTIONS]):
-            return [SlotSet(key=feature, value=response), SlotSet("active_feature", value=None), FollowupAction(name="action_present_results")]
         message = {"payload": "visualization_content",
                    "data": json.dumps(get_visualization_content(tracker))}
         dispatcher.utter_message(json_message=message)
+        if all([tracker.slots[q["feature"]] for q in QUESTIONS]):
+            return [SlotSet(key=feature, value=response), SlotSet("active_feature", value=None), FollowupAction(name="action_present_results")]
         return [SlotSet(key=feature, value=response), SlotSet("active_feature", value=None), FollowupAction(name="action_ask_question")]
 
 
